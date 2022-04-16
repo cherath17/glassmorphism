@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awersom -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 85px;
+            background: purple;
+        }
+
+        .menu {
+            display: none;
+            position: relative;
+            float: right;
+            margin-left: 50px;
+            top: 25px;
+            right: 30px;
+            color: #fff;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 26px;
+            top: 25px;
+            left: 40px;
+            pointer-events: none;
+            color: #fff;
+        }
+
+        nav ul {
+            float: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 30px 40px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        li:hover {
+            /* background: rgba(255, 255, 255, 0.1); */
+            background: linear-gradient(45deg, #660066, #ff00ff);
+            border: 1px solid purple;
+            box-shadow: inset 0 0 10px #660066, inset 0 0 30px#ff99ff, inset 0 0 50px #660066;
+        }
+
+        li:hover a {
+            color: #000;
+        }
+
+        @media only screen and (min-width:321px) and (max-width:768px) {
+            .logo {
+                font-size: 16px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            nav {
+                background-color: purple;
+            }
+
+            nav ul {
+                display: none;
+                margin-top: 50px;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 5px;
+                background: purple;
+                font-size: 16px;
+                text-align: center;
+                display: block;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="logo">LOGO</a>
+        <i onclick="menu()" class="menu fas fa-2x fa-bars"></i>
+
+        <ul id="menupopup">
+            <li>
+                <a href="#">
+                    <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-users"></i> User</a>
+            </li>
+            <li>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <a href="#">Help</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="far fa-search"></i> Search</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<script>
+    function menu() {
+        document.getElementById("menupopup").style.display = "block";
+    }
+</script>
+
+</html>

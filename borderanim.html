@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borderanim</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #0e1538;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.00);
+            overflow: hidden;
+            border-radius: 20px;
+
+        }
+
+        .box h2 {
+            position: relative;
+            color: #fff;
+            font-size: 10em;
+            font-weight: 800;
+            z-index: 1;
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 140%;
+            background: linear-gradient(45deg, #00ccff, #10fa37);
+            animation: animate 4s linear infinite;
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            background: #0e1538;
+            inset: 4px;
+            border-radius: 16px;
+        }
+
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>01</h2>
+    </div>
+</body>
+
+</html>

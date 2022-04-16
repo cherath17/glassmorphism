@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 4px solid blue; */
+    box-sizing: border-box;
+    padding: 100px;
+    /* background: linear-gradient(180deg, #ff66ff 0%, #00ffff 100%); */
+    background: linear-gradient(to bottom left, #00ffff 0%, #6600ff 100%),url(./img/img1.jpeg);
+    /* background: linear-gradient(45deg,deeppink,indigo), url(/img/img3.jpeg); */
+    background-blend-mode:screen;
+    background-size: cover;
+}
+section .content{
+    max-width: 700px;
+}
+section .content h2{
+    font-size: 3em;
+    color: white;
+}
+section .content p{
+    font-size: 1.2rmem;
+    color: white;
+}
+section img{
+    position: relative;
+    max-width: 400px;
+    z-index: 1;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

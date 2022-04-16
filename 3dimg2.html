@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        #box {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            transform-style: preserve-3d;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: perspective(1500px) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(1500px) rotateY(360deg);
+            }
+        }
+
+        #box div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i)*45deg))translateZ(300px);
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+        }
+
+        #box div img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+        }
+
+        .spin {
+            animation: spin 1.4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: perspective(1500px) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(1500px) rotateY(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <div style="--i:1"><img src="./img/img1.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:2"><img src="./img/img8.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:3"><img src="./img/img2peg.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:4"><img src="./img/img3.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:5"><img src="./img/img4.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:6"><img src="./img/img5.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:7"><img src="./img/img6.jpeg" alt="img1" srcset=""></div>
+        <div style="--i:8"><img src="./img/img7.jpeg" alt="img1" srcset=""></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        $('.box div').click(function () {
+            if ($(this).hasClass('spin')) {
+                $('.box div').removeClass('spin');
+            }
+            else {
+                $('.box div').removeClass('spin');
+                $(this).addClass('spin');
+            }
+        });
+    });
+</script>
+
+</html>

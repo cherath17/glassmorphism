@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasmorphism</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Rampart+One&display=swap');
+
+        * {
+            margin: 0;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: midnightblue;
+        }
+
+        body::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(170deg, darkslateblue, lime);
+            clip-path: circle(20% at left 10%);
+        }
+
+        body::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(10deg, mediumspringgreen, midnightblue);
+            clip-path: circle(30% at right 70%);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .container .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 30px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .container .card .content {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s;
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+
+        .container .card .content:hover {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+
+        .container .card .content h1 {
+            position: absolute;
+            font-size: 5em;
+            /* right: -200px; */
+            top: -80px;
+            right: -110px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .container .card .content h2 {
+            font-size: 1.8em;
+            color: white;
+            z-index: 1;
+        }
+
+        .container .card .content p {
+            font-size: 1em;
+            color: white;
+            font-weight: 400;
+            /* line-height: 30px; */
+        }
+
+        .container .card .content a {
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 30px;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: transparent;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h1>01</h1>
+                <h2>Crad One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit sed laboriosam ad
+                    reprehenderit, molestiae id dolorum dolor, minima obcaecati odit corporis?</p>
+                <a href="#">Read me</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h1>02</h1>
+                <h2>Crad One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit sed laboriosam ad
+                    reprehenderit, molestiae id dolorum dolor, minima obcaecati odit corporis?</p>
+                <a href="#">Read me</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h1>03</h1>
+                <h2>Crad One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit sed laboriosam ad
+                    reprehenderit, molestiae id dolorum dolor, minima obcaecati odit corporis?</p>
+                <a href="#">Read me</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>

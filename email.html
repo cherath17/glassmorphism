@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snowfall</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: rgb(134, 131, 131);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header {
+            width: 98%;
+        }
+
+        #logo {
+            max-width: 120px;
+            font-size: 30px;
+            color: honeydew;
+            margin: 3% 0 3% 3%;
+            float: left;
+        }
+
+        .container {
+            background-color: rgba(94, 91, 91, 0.5);
+        }
+
+        #menu {
+            float: right;
+            list-style-type: none;
+            margin: 4%;
+        }
+
+        #menu>li {
+            display: inline-block;
+        }
+
+        #menu>li>a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        h1,
+        p {
+            margin: 3%;
+        }
+
+        .btn {
+            float: right;
+            margin: 0% 2% 4% 3%;
+            background-color: gainsboro;
+            color: black;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        hr {
+            background-color: gainsboro;
+            clear: both;
+            height: 1px;
+            width: 96%;
+            margin: auto;
+        }
+
+        #contact {
+            text-align: center;
+            padding-bottom: 2%;
+            font-size: 16px;
+            line-height: 20px;
+            color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                Email
+            </div>
+            <div>
+                <ul id="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Aboutus</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Info</a>
+                    </li>
+                    <li>
+                        <a href="#">More</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="./img/img5.jpeg" alt="img5" srcset="">
+        </div>
+        <div class="content">
+            <h1>Ho to create Email!</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor numquam et dolore ipsum quaerat
+                dignissimos tenetur ullam officiis. Eveniet aliquam minima provident illo voluptatem ad blanditiis
+                placeat soluta esse fuga!
+            </p>
+            <a class="btn" href="#">Learn more</a>
+            <hr>
+        </div>
+        <footer>
+            <p id="contact">
+                Written by <br>
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

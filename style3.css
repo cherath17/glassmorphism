@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Rampart+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 4px solid blue; */
+    box-sizing: border-box;
+    padding: 100px;
+    background: linear-gradient(to bottom left,white , #000 10%),url(./img/img7.jpeg);
+    background-blend-mode:screen;
+    background-size: cover;
+}
+section .content{
+    max-width: 700px;
+}
+.content h1{
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 3em;
+    color: white;
+text-shadow: 21px 18px 16px rgba(255,255,255,0.52);
+}
+section .content p{
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+    line-height:20px;
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+
+section img{
+    position: relative;
+    max-width: 400px;
+    z-index: 1000;
+    box-shadow: 5px 5px 20px 1px black;
+    /* -webkit-box-reflect:below 1px linear-gradient(transparent,transparent,#0009); */
+}
+.wave1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.wave{
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Rampart+One&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rampart One', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .content h1 {
+            position: absolute;
+            font-size: 4rem;
+            transform: translate(-55%, -55%);
+
+        }
+
+        .content h1:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 1px silver;
+
+        }
+
+        .content h1:nth-child(2) {
+            color: gray;
+            animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                clip-path: polygon(0 44%, 26% 52%, 47% 51%, 67% 57%, 85% 54%, 100% 57%, 100% 100%, 1% 100%);
+
+            }
+
+            50% {
+                clip-path: polygon(0 71%, 31% 77%, 51% 73%, 71% 69%, 90% 56%, 100% 36%, 100% 100%, 1% 100%);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Pickmyad</h1>
+        <h1>Pickmyad</h1>
+    </div>
+</body>
+
+</html>
